@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audi A3 | פרטים והזמנה</title>
+<link rel="stylesheet" href="css/cars.css">
+
+
+<style>
+body.in-iframe header,body.in-iframe nav,body.in-iframe aside,body.in-iframe footer,body.in-iframe marquee{display:none!important}
+body.in-iframe{background:transparent!important}
+body.in-iframe .w{display:block!important;padding:20px;background:transparent!important}
+body.in-iframe main{max-width:100%;margin:0;background:transparent!important}
+body.in-iframe .carimg{background:rgba(60,60,60,0.8)!important}
+body.in-iframe table{background:rgba(40,40,40,0.8)!important}
+</style>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.self!==window.top){document.body.classList.add('in-iframe')}});</script>
+<script src="js/rest_for_loop_new.js"></script>
+</head>
+<body>
+<div class="w">
+<header>
+<div class="hn"><a class="hna" href="homepage.html">דף הבית</a><a class="hna" href="models.html">דגמים</a><a class="hna" href="contact.html">צור קשר</a><a class="hna" href="cart.html">חנות</a></div>
+<a href="homepage.html" class="logo">AUDI</a>
+</header>
+<nav>
+<h3 class="ntitle">דגמי Audi</h3>
+<ul class="nlist">
+<li class="nitem"><a class="nlink active" href="a3.html">Audi A3</a></li>
+<li class="nitem"><a class="nlink" href="a4.html">Audi A4</a></li>
+<li class="nitem"><a class="nlink" href="a6.html">Audi A6</a></li>
+<li class="nitem"><a class="nlink" href="a8.html">Audi A8</a></li>
+<li class="nitem"><a class="nlink" href="q3.html">Audi Q3</a></li>
+<li class="nitem"><a class="nlink" href="q5.html">Audi Q5</a></li>
+<li class="nitem"><a class="nlink" href="q7.html">Audi Q7</a></li>
+<li class="nitem"><a class="nlink" href="q8.html">Audi Q8</a></li>
+<li class="nitem"><a class="nlink" href="rs6.html">Audi RS6</a></li>
+<li class="nitem"><a class="nlink" href="etron.html">Audi e-tron</a></li>
+</ul>
+</nav>
+<main>
+<div class="ch">
+<div class="carimg"><img src="image/A34.jpeg" alt="Audi A3" style="width:100%;height:100%;object-fit:cover;border-radius:20px"></div>
+<div class="cinfo">
+<h1 class="cartitle">Audi A3</h1>
+<p class="cartag">הסדאן הקומפקטי המושלם</p>
+<p class="cardesc">Audi A3 הוא סדאן קומפקטי יוקרתי המשלב עיצוב ספורטיבי עם טכנולוגיה מתקדמת.</p>
+<div class="carprice">₪<span id="totalPrice">189,000</span><span class="pricespan">החל מ-</span></div>
+<div style="margin-top:30px">
+<div class="fg"><label>צבע:</label><select id="colorSelect" onchange="updatePrice()"><option value="white" data-price="0">לבן מטאלי</option><option value="black" data-price="3000">שחור מטאלי (+₪3,000)</option><option value="gray" data-price="3000">אפור מטאלי (+₪3,000)</option><option value="red" data-price="5000">אדום מיוחד (+₪5,000)</option></select></div>
+<div class="fg"><label>שנת ייצור:</label><select id="yearSelect" onchange="updatePrice()"><option value="2024" data-price="0">2024</option><option value="2025" data-price="15000">2025 (+₪15,000)</option></select></div>
+<div class="fg"><label>מנוע:</label><select id="engineSelect" onchange="updatePrice()"><option value="1.5TFSI" data-price="0">1.5 TFSI 150 כ"ס</option><option value="2.0TFSI" data-price="25000">2.0 TFSI 190 כ"ס (+₪25,000)</option><option value="S3" data-price="80000">S3 2.0 TFSI 310 כ"ס (+₪80,000)</option></select></div>
+</div>
+<div style="display:flex;gap:15px;margin-top:25px"><button onclick="addToCart()" class="btn bp">🛒 הוסף לחנות</button><a href="contact.html" class="btn bs">📞 צור קשר</a></div>
+</div>
+</div>
+<div class="specs"><h2 class="specstitle">מפרט טכני</h2>
+
+<table>
+<tr><th>מאפיין</th><th>פרטים</th></tr>
+<tr><td>מנוע</td><td>1.5 TFSI טורבו</td></tr>
+<tr><td>כוח סוס</td><td>150 כ"ס</td></tr>
+<tr><td>מומנט</td><td>250 ניוטון-מטר</td></tr>
+<tr><td>תיבת הילוכים</td><td>S tronic 7 הילוכים</td></tr>
+<tr><td>האצה 0-100</td><td>8.4 שניות</td></tr>
+<tr><td>מהירות מקסימלית</td><td>224 קמ"ש</td></tr>
+<tr><td>צריכת דלק</td><td>5.6 ליטר / 100 ק"מ</td></tr>
+<tr><td>נפח תא מטען</td><td>425 ליטר</td></tr>
+</table>
+</div>
+</main>
+
+<aside>
+<h3 class="atitle">יתרונות A3</h3>
+<div class="ib"><h4 class="ibtitle">🎨 עיצוב</h4><p class="ibtext">קווים ספורטיביים</p></div>
+<div class="ib"><h4 class="ibtitle">💻 טכנולוגיה</h4><p class="ibtext">MMI Touch 10.1 אינץ'</p></div>
+<div class="ib"><h4 class="ibtitle">🛡️ בטיחות</h4><p class="ibtext">5 כוכבי NCAP</p></div>
+</aside>
+
+<footer><p class="ftext">© 2024 Audi Israel</p></footer>
+
+</div>
+
+<marquee behavior="scroll" direction="right" style="background:linear-gradient(90deg,#8B0000,#000);color:white;padding:15px;font-size:18px;font-weight:bold;position:fixed;bottom:0;left:0;width:100%;z-index:9999">🚗 Audi A3 - הסדאן הקומפקטי 🚗</marquee>
+
+<script>
+
+var basePrice=189000;
+function updatePrice(){var colorPrice=parseInt(document.getElementById('colorSelect').selectedOptions[0].dataset.price)||0;var yearPrice=parseInt(document.getElementById('yearSelect').selectedOptions[0].dataset.price)||0;var enginePrice=parseInt(document.getElementById('engineSelect').selectedOptions[0].dataset.price)||0;document.getElementById('totalPrice').textContent=(basePrice+colorPrice+yearPrice+enginePrice).toLocaleString()}
+function addToCart(){var color=document.getElementById('colorSelect').selectedOptions[0].text.split(' (+')[0];var year=document.getElementById('yearSelect').value;var engine=document.getElementById('engineSelect').selectedOptions[0].text.split(' (+')[0];var price=parseInt(document.getElementById('totalPrice').textContent.replace(/,/g,''));var cart=JSON.parse(localStorage.getItem('audiCart'))||[];cart.push({model:'Audi A3',color:color,year:year,engine:engine,price:price,timestamp:new Date().toISOString()});localStorage.setItem('audiCart',JSON.stringify(cart));alert('✅ Audi A3 נוסף לחנות!')}
+
+</script>
+</body>
+</html>

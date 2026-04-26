@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi | תשלום</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body.in-iframe header,
+        body.in-iframe nav,
+        body.in-iframe aside,
+        body.in-iframe footer,
+        body.in-iframe marquee {
+            display: none !important;
+        }
+        body.in-iframe {
+            background: transparent !important;
+        }
+        body.in-iframe .page-wrapper {
+            display: block !important;
+            padding: 20px;
+            background: transparent !important;
+        }
+        body.in-iframe main {
+            max-width: 100%;
+            margin: 0;
+            background: transparent !important;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.self !== window.top) {
+                document.body.classList.add('in-iframe');
+            }
+        });
+    </script>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-nav">
+            <a href="homepage.html">דף הבית</a>
+            <a href="models.html">דגמים</a>
+            <a href="contact.html">צור קשר</a>
+            <a href="cart.html">חנות</a>
+        </div>
+        <a href="homepage.html" class="logo">AUDI</a>
+    </header>
+
+    <!-- LEFT NAVIGATION -->
+    <nav>
+        <h3>דגמי Audi</h3>
+        <ul>
+            <li><a href="a3.html">Audi A3</a></li>
+            <li><a href="a4.html">Audi A4</a></li>
+            <li><a href="a6.html">Audi A6</a></li>
+            <li><a href="a8.html">Audi A8</a></li>
+            <li><a href="q3.html">Audi Q3</a></li>
+            <li><a href="q5.html">Audi Q5</a></li>
+            <li><a href="q7.html">Audi Q7</a></li>
+            <li><a href="q8.html">Audi Q8</a></li>
+            <li><a href="rs6.html">Audi RS6</a></li>
+            <li><a href="etron.html">Audi e-tron</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <h1 class="section-title">💳 השלמת הזמנה</h1>
+
+        <div class="contact-container">
+            <!-- טופס פרטי לקוח -->
+            <form id="checkoutForm" onsubmit="processPayment(event)">
+                <h2 style="margin-bottom: 25px;">פרטי הלקוח</h2>
+                
+                <div class="form-group">
+                    <label for="fullName">שם מלא *</label>
+                    <input type="text" id="fullName" required placeholder="הכנס שם מלא">
+                </div>
+
+                <div class="form-group">
+                    <label for="idNumber">תעודת זהות *</label>
+                    <input type="text" id="idNumber" required placeholder="9 ספרות">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">דוא"ל *</label>
+                    <input type="email" id="email" required placeholder="example@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">טלפון *</label>
+                    <input type="tel" id="phone" required placeholder="05X-XXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">כתובת למשלוח *</label>
+                    <input type="text" id="address" required placeholder="רחוב, מספר בית, עיר">
+                </div>
+
+                <h2 style="margin: 30px 0 25px;">פרטי תשלום</h2>
+
+                <div class="form-group">
+                    <label for="cardNumber">מספר כרטיס *</label>
+                    <input type="text" id="cardNumber" required placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label for="expiry">תוקף *</label>
+                        <input type="text" id="expiry" required placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV *</label>
+                        <input type="text" id="cvv" required placeholder="XXX" maxlength="3">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px; padding: 18px;">
+                    אשר הזמנה ושלם
+                </button>
+            </form>
+
+            <!-- סיכום הזמנה -->
+            <div class="contact-info">
+                <h2 style="margin-bottom: 25px;">סיכום הזמנה</h2>
+                <div id="orderSummary">
+                    <!-- יוצג דרך JavaScript -->
+                </div>
+                
+                <div class="cart-total" style="margin-top: 30px;">
+                    <h3>סה"כ:</h3>
+                    <div class="total-price" id="checkoutTotal">₪0</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside>
+        <h3>מידע בטחוני</h3>
+        <div class="info-box">
+            <h4>🔒 SSL מאובטח</h4>
+            <p>כל הנתונים מוצפנים ב-256bit</p>
+        </div>
+        <div class="info-box">
+            <h4>✅ PCI Certified</h4>
+            <p>עומדים בתקן אבטחת כרטיסי אשראי</p>
+        </div>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2024 Audi Israel - פרויקט גמר Full Stack Client 1</p>
+    </footer>
+
+</div>
+
+<!-- MARQUEE -->
+<marquee behavior="scroll" direction="right" style="background: linear-gradient(90deg, #8B0000, #000); color: white; padding: 15px; font-size: 18px; font-weight: bold; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999;">
+    🚗 ברוכים הבאים ל-Audi Israel | התקדמות דרך טכנולוגיה | Vorsprung durch Technik | 🌟 מבצעים מיוחדים על כל הדגמים! | ☎️ צרו קשר עוד היום | 🚗
+</marquee>
+
+<script>
+    // טעינת סיכום ההזמנה
+    function loadOrderSummary() {
+        const cart = JSON.parse(localStorage.getItem('audiCart')) || [];
+        const summaryDiv = document.getElementById('orderSummary');
+        
+        if (cart.length === 0) {
+            summaryDiv.innerHTML = '<p style="color: gray;">אין פריטים בחנות</p>';
+            return;
+        }
+        
+        let html = '';
+        let total = 0;
+        
+        cart.forEach(item => {
+            total += item.price;
+            html += `
+                <div class="info-box">
+                    <h4>${item.model}</h4>
+                    <p>צבע: ${item.color} | שנה: ${item.year}</p>
+                    <p style="color: crimson; font-weight: bold;">₪${item.price.toLocaleString()}</p>
+                </div>
+            `;
+        });
+        
+        summaryDiv.innerHTML = html;
+        document.getElementById('checkoutTotal').textContent = '₪' + total.toLocaleString();
+    }
+
+    // עיבוד התשלום
+    function processPayment(event) {
+        event.preventDefault();
+        
+        const customerData = {
+            fullName: document.getElementById('fullName').value,
+            idNumber: document.getElementById('idNumber').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            address: document.getElementById('address').value,
+            orderDate: new Date().toISOString()
+        };
+        
+        localStorage.setItem('customerData', JSON.stringify(customerData));
+        
+        alert('✅ ההזמנה בוצעה בהצלחה!\n\nתודה ' + customerData.fullName + '!\nאישור יישלח ל: ' + customerData.email);
+        
+        // מעבר לדף חשבונית
+        window.location.href = 'invoice.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', loadOrderSummary);
+</script>
+
+</body>
+</html>
+

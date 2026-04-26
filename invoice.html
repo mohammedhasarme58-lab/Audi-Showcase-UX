@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audi | חשבונית</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body.in-iframe header,body.in-iframe nav,body.in-iframe aside,body.in-iframe footer,body.in-iframe marquee{display:none!important}
+body.in-iframe{background:transparent!important}
+body.in-iframe .w{display:block!important;padding:20px;background:transparent!important}
+body.in-iframe main{max-width:100%;margin:0;background:transparent!important}
+.inv{background:linear-gradient(145deg,dimgray 0%,slategray 100%);border-radius:20px;padding:40px;max-width:800px;margin:0 auto}
+.inv-h{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid darkred;padding-bottom:20px;margin-bottom:30px}
+.inv-logo{font-size:36px;font-weight:bold;letter-spacing:8px}
+.inv-num{text-align:left;color:lightgray}
+.inv-sec{margin-bottom:30px}
+.inv-sec h3{color:darkred;margin-bottom:15px;font-size:14px;text-transform:uppercase;letter-spacing:2px}
+.inv-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid darkgray}
+.inv-total{background:linear-gradient(145deg,darkred,maroon);padding:20px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+@media print{body{background:white!important}header,nav,aside,footer,marquee,.no-print{display:none!important}.w{display:block!important}main{background:white!important;color:black!important}.inv{box-shadow:none!important;background:white!important}}
+</style>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.self!==window.top){document.body.classList.add('in-iframe')}});</script>
+</head>
+<body>
+<div class="w">
+<header>
+<div class="hn">
+<a class="hna" href="homepage.html">דף הבית</a>
+<a class="hna" href="models.html">דגמים</a>
+<a class="hna" href="contact.html">צור קשר</a>
+<a class="hna" href="cart.html">חנות</a>
+</div>
+<a href="homepage.html" class="logo">AUDI</a>
+</header>
+<nav>
+<h3 class="ntitle">דגמי Audi</h3>
+<ul class="nlist">
+<li class="nitem"><a class="nlink" href="a3.html">Audi A3</a></li>
+<li class="nitem"><a class="nlink" href="a4.html">Audi A4</a></li>
+<li class="nitem"><a class="nlink" href="a6.html">Audi A6</a></li>
+<li class="nitem"><a class="nlink" href="a8.html">Audi A8</a></li>
+<li class="nitem"><a class="nlink" href="q3.html">Audi Q3</a></li>
+<li class="nitem"><a class="nlink" href="q5.html">Audi Q5</a></li>
+<li class="nitem"><a class="nlink" href="q7.html">Audi Q7</a></li>
+<li class="nitem"><a class="nlink" href="q8.html">Audi Q8</a></li>
+<li class="nitem"><a class="nlink" href="rs6.html">Audi RS6</a></li>
+<li class="nitem"><a class="nlink" href="etron.html">Audi e-tron</a></li>
+</ul>
+</nav>
+<main>
+<h1 class="t">📄 חשבונית</h1>
+<div class="inv">
+<div class="inv-h">
+<div class="inv-logo">AUDI</div>
+<div class="inv-num">
+<div style="font-size:18px;font-weight:bold">חשבונית מס'</div>
+<div id="invoiceNumber" style="font-size:24px;color:darkred">#INV-0000</div>
+<div id="invoiceDate" style="margin-top:5px"></div>
+</div>
+</div>
+<div class="inv-sec"><h3>פרטי הלקוח</h3><div id="customerDetails"></div></div>
+<div class="inv-sec">
+<h3>פריטים שהוזמנו</h3>
+<table style="width:100%">
+<tr><th>דגם</th><th>פרטים</th><th>מחיר</th></tr>
+<tbody id="invoiceItems"></tbody>
+</table>
+</div>
+<div class="inv-total"><span>סה"כ לתשלום:</span><span id="invoiceTotal">₪0</span></div>
+</div>
+<div style="text-align:center;margin-top:30px" class="no-print">
+<button onclick="window.print()" class="btn bp">🖨️ הדפס חשבונית</button>
+<a href="homepage.html" class="btn bs" style="margin-right:15px">חזרה לדף הבית</a>
+</div>
+</main>
+<aside>
+<h3 class="atitle">מה הלאה?</h3>
+<div class="ib"><h4 class="ibtitle">📧 אישור נשלח</h4><p class="ibtext">קיבלת אישור לדוא"ל שלך</p></div>
+<div class="ib"><h4 class="ibtitle">📞 ניצור קשר</h4><p class="ibtext">נציג יתקשר אליך בקרוב</p></div>
+<div class="ib"><h4 class="ibtitle">🚗 מסירה</h4><p class="ibtext">הרכב יגיע תוך 14 ימי עסקים</p></div>
+</aside>
+<footer><p class="ftext">© 2024 Audi Israel - פרויקט גמר Full Stack Client 1</p></footer>
+</div>
+<marquee behavior="scroll" direction="right" style="background:linear-gradient(90deg,#8B0000,#000);color:white;padding:15px;font-size:18px;font-weight:bold;position:fixed;bottom:0;left:0;width:100%;z-index:9999">
+🚗 ברוכים הבאים ל-Audi Israel | התקדמות דרך טכנולוגיה | Vorsprung durch Technik | 🌟 מבצעים מיוחדים על כל הדגמים! | ☎️ צרו קשר עוד היום | 🚗
+</marquee>
+<script>
+function loadInvoice(){var invoiceNum=Math.floor(100000+Math.random()*900000);document.getElementById('invoiceNumber').textContent='#INV-'+invoiceNum;var today=new Date();document.getElementById('invoiceDate').textContent=today.toLocaleDateString('he-IL');var customer=JSON.parse(localStorage.getItem('customerData'))||{};document.getElementById('customerDetails').innerHTML='<div class="inv-row"><span>שם:</span><span>'+(customer.fullName||'לא זמין')+'</span></div><div class="inv-row"><span>ת.ז:</span><span>'+(customer.idNumber||'לא זמין')+'</span></div><div class="inv-row"><span>דוא"ל:</span><span>'+(customer.email||'לא זמין')+'</span></div><div class="inv-row"><span>טלפון:</span><span>'+(customer.phone||'לא זמין')+'</span></div><div class="inv-row"><span>כתובת:</span><span>'+(customer.address||'לא זמין')+'</span></div>';var cart=JSON.parse(localStorage.getItem('audiCart'))||[];var itemsHtml='';var total=0;cart.forEach(function(item){total+=item.price;itemsHtml+='<tr><td>'+item.model+'</td><td>צבע: '+item.color+', שנה: '+item.year+', מנוע: '+item.engine+'</td><td style="color:crimson;font-weight:bold">₪'+item.price.toLocaleString()+'</td></tr>'});document.getElementById('invoiceItems').innerHTML=itemsHtml;document.getElementById('invoiceTotal').textContent='₪'+total.toLocaleString();localStorage.removeItem('audiCart')}
+document.addEventListener('DOMContentLoaded',loadInvoice);
+</script>
+</body>
+</html>

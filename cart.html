@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audi | חנות</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body.in-iframe header,body.in-iframe nav,body.in-iframe aside,body.in-iframe footer,body.in-iframe marquee{display:none!important}
+body.in-iframe{background:transparent!important}
+body.in-iframe .w{display:block!important;padding:20px;background:transparent!important}
+body.in-iframe main{max-width:100%;margin:0;background:transparent!important}
+body.in-iframe .ci{background:rgba(60,60,60,0.9)!important}
+body.in-iframe .ct{background:linear-gradient(145deg,darkred,maroon)!important}
+</style>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.self!==window.top){document.body.classList.add('in-iframe')}});</script>
+</head>
+<body>
+<div class="w">
+<header>
+<div class="hn">
+<a class="hna" href="homepage.html">דף הבית</a>
+<a class="hna" href="models.html">דגמים</a>
+<a class="hna" href="contact.html">צור קשר</a>
+<a class="hna" href="cart.html">חנות</a>
+</div>
+<a href="homepage.html" class="logo">AUDI</a>
+</header>
+<nav>
+<h3 class="ntitle">דגמי Audi</h3>
+<ul class="nlist">
+<li class="nitem"><a class="nlink" href="a3.html">Audi A3</a></li>
+<li class="nitem"><a class="nlink" href="a4.html">Audi A4</a></li>
+<li class="nitem"><a class="nlink" href="a6.html">Audi A6</a></li>
+<li class="nitem"><a class="nlink" href="a8.html">Audi A8</a></li>
+<li class="nitem"><a class="nlink" href="q3.html">Audi Q3</a></li>
+<li class="nitem"><a class="nlink" href="q5.html">Audi Q5</a></li>
+<li class="nitem"><a class="nlink" href="q7.html">Audi Q7</a></li>
+<li class="nitem"><a class="nlink" href="q8.html">Audi Q8</a></li>
+<li class="nitem"><a class="nlink" href="rs6.html">Audi RS6</a></li>
+<li class="nitem"><a class="nlink" href="etron.html">Audi e-tron</a></li>
+</ul>
+<h3 class="ntitle" style="margin-top:30px">קישורים</h3>
+<ul class="nlist">
+<li class="nitem"><a class="nlink" href="models.html">כל הדגמים</a></li>
+<li class="nitem"><a class="nlink" href="contact.html">צור קשר</a></li>
+<li class="nitem"><a class="nlink active" href="cart.html">חנות</a></li>
+</ul>
+</nav>
+<main>
+<h1 class="t">🛒 חנות</h1>
+<div id="cartItems"></div>
+<div id="emptyCart" style="display:none;text-align:center;padding:60px">
+<h2 style="color:gray;margin-bottom:20px">החנות ריקה</h2>
+<p style="color:lightgray;margin-bottom:30px">עדיין לא הוספת רכבים לחנות</p>
+<a href="models.html" class="btn bp">לצפייה בדגמים</a>
+</div>
+<div id="cartSummary" style="display:none">
+<div class="ct"><h3 class="cttitle">סה"כ לתשלום:</h3><div class="cttotal" id="totalPrice">₪0</div></div>
+<div style="margin-top:30px;display:flex;gap:15px">
+<a href="checkout.html" class="btn bp">המשך לתשלום</a>
+<button onclick="clearCart()" class="btn bs">נקה חנות</button>
+</div>
+</div>
+</main>
+<aside>
+<h3 class="atitle">עזרה</h3>
+<div class="ib"><h4 class="ibtitle">💳 אמצעי תשלום</h4><p class="ibtext">כרטיס אשראי, העברה בנקאית, מימון</p></div>
+<div class="ib"><h4 class="ibtitle">🚚 משלוח</h4><p class="ibtext">הרכב יגיע אליכם עד 14 ימי עסקים</p></div>
+<div class="ib"><h4 class="ibtitle">🔄 החזרות</h4><p class="ibtext">14 יום להחזרה ללא שאלות</p></div>
+</aside>
+<footer>
+<p class="ftext">© 2024 Audi Israel - פרויקט גמר Full Stack Client 1</p>
+<div class="fl">
+<a class="fla" href="homepage.html">דף הבית</a>
+<a class="fla" href="models.html">דגמים</a>
+<a class="fla" href="contact.html">צור קשר</a>
+<a class="fla" href="cart.html">חנות</a>
+</div>
+</footer>
+</div>
+<marquee behavior="scroll" direction="right" style="background:linear-gradient(90deg,#8B0000,#000);color:white;padding:15px;font-size:18px;font-weight:bold;position:fixed;bottom:0;left:0;width:100%;z-index:9999">
+🚗 ברוכים הבאים ל-Audi Israel | התקדמות דרך טכנולוגיה | Vorsprung durch Technik | 🌟 מבצעים מיוחדים על כל הדגמים! | ☎️ צרו קשר עוד היום | 🚗
+</marquee>
+<script>
+function loadCart(){var cart=JSON.parse(localStorage.getItem('audiCart'))||[];var cartItemsDiv=document.getElementById('cartItems');var emptyCartDiv=document.getElementById('emptyCart');var cartSummaryDiv=document.getElementById('cartSummary');if(cart.length===0){emptyCartDiv.style.display='block';cartSummaryDiv.style.display='none';return}emptyCartDiv.style.display='none';cartSummaryDiv.style.display='block';var html='';var total=0;cart.forEach(function(item,index){total+=item.price;html+='<div class="ci"><div><h4 class="cititle">'+item.model+'</h4><p class="citext">צבע: '+item.color+' | שנה: '+item.year+' | מנוע: '+item.engine+'</p></div><div style="display:flex;align-items:center;gap:20px"><div class="ciprice">₪'+item.price.toLocaleString()+'</div><button onclick="removeItem('+index+')" style="background:crimson;border:none;color:white;padding:8px 15px;border-radius:8px;cursor:pointer">הסר</button></div></div>'});cartItemsDiv.innerHTML=html;document.getElementById('totalPrice').textContent='₪'+total.toLocaleString()}
+function removeItem(index){var cart=JSON.parse(localStorage.getItem('audiCart'))||[];cart.splice(index,1);localStorage.setItem('audiCart',JSON.stringify(cart));loadCart();alert('הפריט הוסר מהחנות')}
+function clearCart(){if(confirm('האם אתה בטוח שברצונך לנקות את כל החנות?')){localStorage.removeItem('audiCart');loadCart();alert('החנות נוקתה')}}
+document.addEventListener('DOMContentLoaded',loadCart);
+</script>
+</body>
+</html>

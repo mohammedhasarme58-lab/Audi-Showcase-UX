@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audi Q5 | פרטים והזמנה</title>
+<link rel="stylesheet" href="css/cars.css">
+<script src="js/rest_for_loop_new.js"></script>
+<style>
+body.in-iframe header,body.in-iframe nav,body.in-iframe aside,body.in-iframe footer,body.in-iframe marquee{display:none!important}
+body.in-iframe{background:transparent!important}
+body.in-iframe .w{display:block!important;padding:20px;background:transparent!important}
+body.in-iframe main{max-width:100%;margin:0;background:transparent!important}
+body.in-iframe .carimg{background:rgba(60,60,60,0.8)!important}
+body.in-iframe table{background:rgba(40,40,40,0.8)!important}
+</style>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.self!==window.top){document.body.classList.add('in-iframe')}});</script>
+</head>
+<body>
+<div class="w">
+<header>
+<div class="hn"><a class="hna" href="homepage.html">דף הבית</a><a class="hna" href="models.html">דגמים</a><a class="hna" href="contact.html">צור קשר</a><a class="hna" href="cart.html">חנות</a></div>
+<a href="homepage.html" class="logo">AUDI</a>
+</header>
+<nav>
+<h3 class="ntitle">דגמי Audi</h3>
+<ul class="nlist">
+<li class="nitem"><a class="nlink" href="a3.html">Audi A3</a></li>
+<li class="nitem"><a class="nlink" href="a4.html">Audi A4</a></li>
+<li class="nitem"><a class="nlink" href="a6.html">Audi A6</a></li>
+<li class="nitem"><a class="nlink" href="a8.html">Audi A8</a></li>
+<li class="nitem"><a class="nlink" href="q3.html">Audi Q3</a></li>
+<li class="nitem"><a class="nlink active" href="q5.html">Audi Q5</a></li>
+<li class="nitem"><a class="nlink" href="q7.html">Audi Q7</a></li>
+<li class="nitem"><a class="nlink" href="q8.html">Audi Q8</a></li>
+<li class="nitem"><a class="nlink" href="rs6.html">Audi RS6</a></li>
+<li class="nitem"><a class="nlink" href="etron.html">Audi e-tron</a></li>
+</ul>
+</nav>
+<main>
+<div class="ch">
+<div class="carimg"><img src="image/q54.jpeg" alt="Audi Q5" style="width:100%;height:100%;object-fit:cover;border-radius:20px"></div>
+<div class="cinfo">
+<h1 class="cartitle">Audi Q5</h1>
+<p class="cartag">SUV המשפחתי הנמכר ביותר</p>
+<p class="cardesc">Audi Q5 הוא ה-SUV המושלם למשפחה. מרווח, בטוח ומלא בטכנולוגיה.</p>
+<div class="carprice">₪<span id="totalPrice">319,000</span><span class="pricespan">החל מ-</span></div>
+<div style="margin-top:30px">
+<div class="fg"><label>צבע:</label><select id="colorSelect" onchange="updatePrice()"><option value="white" data-price="0">לבן גלייסר</option><option value="black" data-price="3500">שחור מיתוס (+₪3,500)</option><option value="gray" data-price="3500">אפור מנהטן (+₪3,500)</option><option value="blue" data-price="5000">כחול נוי (+₪5,000)</option></select></div>
+<div class="fg"><label>שנת ייצור:</label><select id="yearSelect" onchange="updatePrice()"><option value="2024" data-price="0">2024</option><option value="2025" data-price="20000">2025 (+₪20,000)</option></select></div>
+<div class="fg"><label>מנוע:</label><select id="engineSelect" onchange="updatePrice()"><option value="2.0TFSI" data-price="0">2.0 TFSI 265 כ"ס</option><option value="2.0TDI" data-price="15000">2.0 TDI 204 כ"ס (+₪15,000)</option><option value="SQ5" data-price="130000">SQ5 3.0 TFSI 354 כ"ס (+₪130,000)</option></select></div>
+</div>
+<div style="display:flex;gap:15px;margin-top:25px"><button onclick="addToCart()" class="btn bp">🛒 הוסף לחנות</button><a href="contact.html" class="btn bs">📞 צור קשר</a></div>
+</div>
+</div>
+<div class="specs"><h2 class="specstitle">מפרט טכני</h2>
+<table>
+<tr><th>מאפיין</th><th>פרטים</th></tr>
+<tr><td>מנוע</td><td>2.0 TFSI טורבו</td></tr>
+<tr><td>כוח סוס</td><td>265 כ"ס</td></tr>
+<tr><td>מומנט</td><td>370 ניוטון-מטר</td></tr>
+<tr><td>תיבת הילוכים</td><td>S tronic 7 הילוכים</td></tr>
+<tr><td>האצה 0-100</td><td>6.3 שניות</td></tr>
+<tr><td>מהירות מקסימלית</td><td>237 קמ"ש</td></tr>
+<tr><td>הנעה</td><td>Quattro הנעה כפולה</td></tr>
+<tr><td>נפח תא מטען</td><td>550 ליטר</td></tr>
+</table>
+</div>
+</main>
+<aside>
+<h3 class="atitle">יתרונות Q5</h3>
+<div class="ib"><h4 class="ibtitle">🏆 נמכר ביותר</h4><p class="ibtext">ה-SUV הפופולרי בישראל</p></div>
+<div class="ib"><h4 class="ibtitle">👨‍👩‍👧‍👦 משפחתי</h4><p class="ibtext">5 מושבים נוחים</p></div>
+<div class="ib"><h4 class="ibtitle">🛡️ בטיחות</h4><p class="ibtext">5 כוכבי NCAP</p></div>
+</aside>
+<footer><p class="ftext">© 2024 Audi Israel</p></footer>
+</div>
+<marquee behavior="scroll" direction="right" style="background:linear-gradient(90deg,#8B0000,#000);color:white;padding:15px;font-size:18px;font-weight:bold;position:fixed;bottom:0;left:0;width:100%;z-index:9999">🚗 Audi Q5 - ה-SUV הנמכר ביותר 🚗</marquee>
+<script>
+var basePrice=319000;
+function updatePrice(){var colorPrice=parseInt(document.getElementById('colorSelect').selectedOptions[0].dataset.price)||0;var yearPrice=parseInt(document.getElementById('yearSelect').selectedOptions[0].dataset.price)||0;var enginePrice=parseInt(document.getElementById('engineSelect').selectedOptions[0].dataset.price)||0;document.getElementById('totalPrice').textContent=(basePrice+colorPrice+yearPrice+enginePrice).toLocaleString()}
+function addToCart(){var color=document.getElementById('colorSelect').selectedOptions[0].text.split(' (+')[0];var year=document.getElementById('yearSelect').value;var engine=document.getElementById('engineSelect').selectedOptions[0].text.split(' (+')[0];var price=parseInt(document.getElementById('totalPrice').textContent.replace(/,/g,''));var cart=JSON.parse(localStorage.getItem('audiCart'))||[];cart.push({model:'Audi Q5',color:color,year:year,engine:engine,price:price,timestamp:new Date().toISOString()});localStorage.setItem('audiCart',JSON.stringify(cart));alert('✅ Audi Q5 נוסף לחנות!')}
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+:root {
+    --main-red: #8B0000;
+    --dark-red: #4a0000;
+    --glass: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(60, 60, 60, 0.8);
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+.w, .page-wrapper {
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+main {
+    margin: 100px 220px;
+    padding: 20px;
+    min-height: 60vh;
+}
+
+header {
+    background: #000;
+    padding: 15px 5%;
+    border-bottom: 2px solid var(--main-red);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav, aside {
+    position: fixed;
+    top: 75px;
+    bottom: 0;
+    width: 200px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    overflow-y: auto;
+    border-left: 1px solid #333;
+}
+
+nav {
+    right: 0;
+}
+
+aside {
+    left: 0;
+    border-left: none;
+    border-right: 1px solid #333;
+}
+
+.t, .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-right: 5px solid var(--main-red);
+    padding-right: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+    font-weight: bold;
+    border: none;
+}
+
+.bp, .btn-primary {
+    background: var(--main-red);
+    color: white;
+}
+
+    .bp:hover {
+        background: white;
+        color: var(--main-red);
+    }
+
+.bs, .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+    .bs:hover {
+        background: white;
+        color: black;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--glass);
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background: var(--main-red);
+    color: white;
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.ci {
+    background: var(--glass);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #333;
+}
+
+.ct {
+    background: linear-gradient(145deg, var(--main-red), var(--dark-red));
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.g {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--glass);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.cimg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+form {
+    background: var(--glass);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--input-bg);
+    border: 1px solid #555;
+    color: white;
+    border-radius: 8px;
+}
+
+    input:focus {
+        border-color: var(--main-red);
+        outline: none;
+        background: #444;
+    }
+
+.ib, .info-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-right: 3px solid var(--main-red);
+}
+
+.ibtitle, h4 {
+    color: var(--main-red);
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+.fl, .footer-links {
+    margin-top: 15px;
+}
+
+.fla, .header-nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+    .fla:hover, .header-nav a:hover {
+        color: var(--main-red);
+    }
+
+body.in-iframe main {
+    margin: 20px auto !important;
+    max-width: 95%;
+}
+
+body.in-iframe .w {
+    padding: 10px !important;
+}
+
+@media (max-width: 1100px) {
+    main {
+        margin: 100px 20px;
+    }
+
+    nav, aside {
+        display: none;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
